@@ -3,7 +3,7 @@ PHP 7 required
 ```bash
 $ git clone git@github.com:furtuna/lucky_ticket.git
 $ cd lucky_ticket/
-$ composer install
+$ php composer.phar install
 $ php -S localhost:8080
 ```
 #### Request Example
