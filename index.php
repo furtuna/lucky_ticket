@@ -20,7 +20,6 @@ $ticketsRangeTransfer = TicketsRangeTransfer::createFromArray($_GET);
 $outputArray = $luckyTicketsProcessor->process($ticketsRangeTransfer);
 
 /** Output. */
-echo 'Rows count: ', count($outputArray), '<br>';
 foreach ($outputArray as $outputString) {
     echo $outputString, '<br>';
 }

@@ -42,15 +42,15 @@ class LuckyTicketsProcessor
         }
 
         $ticketsRange = TicketsRange::createFromTransfer($ticketsRangeTransfer);
-        $luckyTickets = [];
+        $luckyTicketsCount = 0;
         $ticketsRangeIterator = $ticketsRange->iterate();
 
         foreach ($ticketsRangeIterator as $ticketNumber) {
             if ($this->calculator->isLucky($ticketNumber)) {
-                $luckyTickets[] = $ticketNumber;
+                ++$luckyTicketsCount;
             }
         }
 
-        return $luckyTickets;
+        return [sprintf('Lucky tickets count: %s', $luckyTicketsCount)];
     }
 }
